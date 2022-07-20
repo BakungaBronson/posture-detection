@@ -6,8 +6,10 @@ import time
 import datetime as dt
 import argparse
 
+videoEnv = "Le Chat Noir gameplay.mp4"
+
 class App:
-    def __init__(self, window, window_title, video_source="Le Chat Noir gameplay.mp4"):
+    def __init__(self, window, window_title, video_source=videoEnv):
         self.window = window
         self.window.title(window_title)
         self.video_source = video_source
@@ -64,7 +66,7 @@ class App:
 
 
 class VideoCapture:
-    def __init__(self, video_source="Le Chat Noir gameplay.mp4"):
+    def __init__(self, video_source=videoEnv):
         # Open the video source
         self.vid = cv2.VideoCapture(video_source)
         if not self.vid.isOpened():
